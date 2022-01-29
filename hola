@@ -1,0 +1,167 @@
+var fiwbb = createSprite(50,220,15,15);
+
+
+
+var cbb1 = createSprite(85,120,10,10)
+
+
+var cbb2 = createSprite(235,170,10,10);
+
+
+var cbb3 = createSprite(320,60,10,10);
+
+
+var cbb4 = createSprite(165,240,10,10)
+
+
+var cbb5 = createSprite(340,150,10,10)
+
+
+var cbb6 = createSprite(60,240,10,10)
+
+
+var cbb7 = createSprite(303,110,10,10)
+
+
+var cbb8 = createSprite(140,190,10,10)
+
+
+var cbb9 = createSprite(35,353,10,10)
+
+var cbb10 = createSprite(345,236,10,10)
+
+var cbb11= createSprite(335,282,10,10)
+
+var cbb12= createSprite(283,353,10,10)
+
+var cbb13= createSprite(306,319,10,10)
+
+var cbb14= createSprite(351,71,10,10)
+
+var cbb15= createSprite(233,273,10,10)
+
+var cbb16= createSprite(350,350,10,10)
+
+var cbb17= createSprite(300,200,10,10)
+
+var cbb18= createSprite(300,150,10,10)
+
+var cbb19= createSprite(148,33,10,10)
+
+var cbb20= createSprite(325,33,10,10)
+
+var game 
+
+var fail = 0;
+
+fiwbb.shapeColor = "PINK"
+cbb1.velocityX = 100
+cbb2.velocityY = 30
+cbb3.velocityX = 20
+cbb4.velocityY = 15
+cbb5.velocityX = 9
+cbb6.velocityY = 19
+cbb7.velocityX = 34
+cbb8.velocityY = 24
+cbb9.velocityX = -6
+cbb10.velocityX = 100
+cbb11velocityY = 30
+cbb12.velocityY = 24
+cbb13.velocityX = 20
+cbb14.velocityY = 15
+cbb15.velocityX = 9
+cbb16.velocityY = 19
+cbb17.velocityX = 34
+cbb18.velocityY = 24
+cbb19.velocityX = -6
+cbb20.velocityY = 24
+
+
+function draw() {
+background("white");
+textSize(30);
+text("Fail " +fail , 200, 50);
+
+
+if (keyDown("RIGHT_ARROW")) {
+fiwbb.x = fiwbb.x +2
+
+}
+if (keyDown("LEFT_ARROW")) {
+fiwbb.x = fiwbb.x -2  
+}
+if (keyDown("UP_ARROW")) {
+fiwbb.y = fiwbb.y -2
+
+}
+if (keyDown("DOWN_ARROW")) {
+fiwbb.y = fiwbb.y +2
+  
+}
+
+
+if (fiwbb.isTouching(cbb1)||fiwbb.isTouching(cbb2)||fiwbb.isTouching(cbb3)) 
+{
+fiwbb.x = 50  
+fiwbb.y = 220
+fail = fail +2
+}
+
+if (fiwbb.isTouching(cbb4)||fiwbb.isTouching(cbb5)||fiwbb.isTouching(cbb6)||fiwbb.isTouching(cbb7)||fiwbb.isTouching(cbb8)||fiwbb.isTouching(cbb9)||fiwbb.isTouching(cbb11)||fiwbb.isTouching(cbb12)||fiwbb.isTouching(cbb13)||fiwbb.isTouching(cbb14)||fiwbb.isTouching(cbb15)||fiwbb.isTouching(cbb16)) 
+{
+fiwbb.x = 50  
+fiwbb.y = 220
+fail = fail +1
+}
+
+if (fiwbb.isTouching(cbb11)){
+  g
+}
+
+
+createEdgeSprites();
+fiwbb.bounceOff(edges);
+cbb1.bounceOff(edges);
+cbb2.bounceOff(edges);
+cbb3.bounceOff(edges);
+cbb4.bounceOff(edges);
+cbb5.bounceOff(edges);
+cbb6.bounceOff(edges);
+cbb7.bounceOff(edges);
+cbb8.bounceOff(edges);
+cbb9.bounceOff(edges);
+cbb10.bounceOff(edges);
+cbb11.bounceOff(edges);
+cbb12.bounceOff(edges);
+cbb14.bounceOff(edges);
+cbb15.bounceOff(edges);
+cbb16.bounceOff(edges);
+cbb17.bounceOff(edges);
+cbb18.bounceOff(edges);
+cbb19.bounceOff(edges);
+cbb20.bounceOff(edges);
+cbb13.bounceOff(edges);
+
+
+drawSprites();
+cbb9.shapeColor="green"
+cbb8.shapeColor="red"
+cbb7.shapeColor="orange"
+cbb6.shapeColor="white"
+cbb5.shapeColor="blue"
+cbb4.shapeColor="turquoise"
+cbb3.shapeColor="skyBlue"
+cbb2.shapeColor="purple"
+cbb1.shapeColor="purple"
+cbb10.shapeColor="green"
+cbb11.shapeColor="red"
+cbb12.shapeColor="orange"
+cbb13.shapeColor="navy"
+cbb14.shapeColor="silver"
+cbb15.shapeColor="teal"
+cbb16.shapeColor="golden"
+cbb17.shapeColor="lime"
+cbb18.shapeColor="orange"
+cbb19.shapeColor="yellow"
+cbb20.shapeColor="pink"
+}
